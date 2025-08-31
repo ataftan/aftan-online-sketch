@@ -10,6 +10,8 @@
   <link rel="icon" type="image/x-icon" href="assets/main-blue.png" />
 
   <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="info.css" />
+
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   <script src="jquery.ui.touch-punch.min.js"></script>
@@ -26,14 +28,26 @@
       <div id="content"></div>
     </main>
 
-    <div class="main-mobile">
+    <!-- <div class="main-mobile">
     <div class="main-mobile-child">
       <div id="navbar-mobile"></div>
       <div id="portrait-mobile"></div>
-      <!-- create one main div inside this which would serve as the container in which thinsg r put.
-       default for this would be the portrait image -->
        </div>
+    </div> -->
+  
+  <div class="index-main-mobile">
+   <div class="index-nav-mobile">
+    <div class="index-nav-title-mobile">aftan</div>
+    <div class="index-nav-nav-mobile">
+      <div id="info-mobile-link"><a href="info-mobile.html">info</a></div>
+      <div><a href=work.html">works</a></div>
     </div>
+   </div>
+   <div class="index-img-mobile">
+    <div id="index-img-mobile">
+    <img class="index-img-portrait-mobile" src="assets/main-blue.png">
+   </div>
+  </div>
   </div>
   <script>
   const isDesktop = window.matchMedia("(min-width: 768px)").matches;

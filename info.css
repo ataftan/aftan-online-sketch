@@ -1,0 +1,78 @@
+
+@media only screen and (max-width: 900px) {
+.index-main-mobile {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.4fr 5fr;
+     gap: 0px;
+    overflow: hidden;
+    gap: 0px;
+    overflow: hidden;
+
+  }}
+
+  .index-nav-mobile{
+    grid-row:1;
+    grid-column: 1;
+     margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0px;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  .index-nav-nav-mobile{
+    margin:1em;
+    /* border:1px solid black; */
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+      font-family: "Fugit", monospace;
+  font-size: 1em;
+  letter-spacing: 0px;
+  transform: scaleY(1.3);
+  }
+   #info-mobile-link{
+    margin-right: 3em;
+  }
+
+  .index-nav-title-mobile{
+    font-size: 2.4em;
+    /* transform: scaleY(2) scaleX(1.4); */
+    padding-left: 0.1em;
+    font-family: Brut;
+    background: transparent;
+  }
+   
+
+  .index-img-mobile{
+     grid-row:2;
+    grid-column: 1;
+     margin: 0;
+     
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+        position: relative;
+
+  }
+     #index-img-mobile{
+    position: aboslute;
+    width: 150%;
+    position: absolute;
+    top: 0%;
+    left:-45%;
+    transform: rotate(-1deg);
+   }
+   
+   .index-img-portrait-mobile {
+    background-color: transparent;
+    border: transparent;
+    
+    width: 100%;
+  }

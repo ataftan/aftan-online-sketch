@@ -77,11 +77,64 @@ img {
 }
 
 
-.main-info-mobile {
+ .container-info-mobile {
+     overflow: hidden;
+     font-family: sans-serif;
+     padding: 0px;
+     min-height: 100%;
+     display: flex;
+     flex-direction: column;
+     margin: 0px;
+ }
 
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+
+ .main-info-mobile {
+     flex: 1;
+
+     overflow: hidden;
+     display: grid;
+     grid-template-rows: 1fr 300px;
+     gap: 0px;
+     margin: 0;
+     padding: 0;
+ }
+
+
+ .main-info-mobile>div:nth-child(1) {
+     grid-row: 1;
+     overflow-x: hidden;
+     overflow-y: auto;
+     grid-column: 1;
+     margin: 0;
+     background-color: rgb(255, 255, 255);
+
+     padding: 1em 0 0 1em;
+         background-color: #ffffff;
+
+
+ }
+
+ 
+ .main-info-mobile>div:nth-child(2) {
+     grid-row: 2;
+     grid-column: 1;
+         background-color: #ffffff;
+
+     display: flex;
+
+     /* no need for inline-flex unless you want shrink-to-content horizontally */
+     justify-content: center;
+     align-items: flex-start;
+     /* aligns image to top of its own row */
+     text-align: center;
+     /* horizontal centering */
+     margin: 0;
+     padding: 0em 0 0 0;
+
+
+
+
+ }
 
 .artifact-wrapper {
   position: relative;
@@ -766,20 +819,30 @@ aside {
     width: 100%;
   }
 
-  .about-head {
-    font-size: larger;
-  }
 
-  .about-para {
-    margin: 5em 1em 0 0;
-    line-height: 20px;
-    transform: scaleY(1.3);
-    text-align: center;
+  .about-head {
     font-size: 1em;
   }
 
+  .about-para {
+    margin: 2em 1em 0 0;
+    line-height: 10px;
+    transform: scaleY(1.3);
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  #my-paragraph span {
+  background-color: white;
+  display: inline-block;
+  color: black;
+  font-family: Brut;
+  padding: 0.3em;
+  margin: 0.1em
+}
+
   .artifact-mobile {
-    margin-top: 1em;
+    margin: 0 auto;
     background-color: transparent;
     border: transparent;
     width: 180%;
@@ -787,6 +850,7 @@ aside {
 }
 
 .artifact-mobile img {
-  width: 90%;
+  width: 78%;
   height: auto;
+  margin: 0 auto; 
 }
