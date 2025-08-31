@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>aftan</title>
+  <link rel="icon" type="image/x-icon" href="assets/main-blue.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
+</head>
+
+<body>
+
+
+  <div class="container" id="container">
+    <main class="main" id="main">
+      <div id="navbar"></div>
+      <div id="portrait"></div>
+      <div id="artifact"></div>
+      <div id="content"></div>
+    </main>
+
+    <div class="main-mobile">
+    <div class="main-mobile-child">
+      <div id="navbar-mobile"></div>
+      <div id="portrait-mobile"></div>
+      <!-- create one main div inside this which would serve as the container in which thinsg r put.
+       default for this would be the portrait image -->
+       </div>
+    </div>
+  </div>
+  <script>
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+  if (isDesktop) {
+    document.write('<script src="desktop.js"><\/script>');
+  } else {
+    document.write('<script src="mobile.js"><\/script>');
+  }
+</script>
+  <script src="desktop.js"></script>
+  <script src="mobile.js"></script>
+</body>
+
+</html>

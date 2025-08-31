@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>aftan</title>
+    <link rel="icon" type="image/x-icon" href="assets/main-blue.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="work.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+</head>
+
+<body>
+
+    <div class="work-main">
+        <div class="container-work">
+            <div id="navbar-work"></div>
+            <div id="portrait-work"></div>
+        </div>
+        <div class="work-gallery-container">
+            <div class="work-gallery gallery-items">
+
+
+
+            </div>
+            <div class="gallery-filter">
+                <div id="filter-title">filter/</div>
+                <div class="filters">
+                    <button data-filter="all">all</button>
+                    <button data-filter="poetry">poetry</button>
+                    <button data-filter="visual">visual art</button>
+                    <button data-filter="pub">publications</button>
+                    <button data-filter="websites">websites</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="work-main-mobile">
+        <div class="container-work-mobile">
+            <div id="title-work-mobile">aftan</div>
+            <div id="portrait-work-mobile">
+                <div id="portrait-div-mobile">
+                    <img class="image-div-mobile" src="assets/main-blue.png">
+                </div>
+            </div>
+            <div id="filter-work-mobile">
+                <div id="filter-title">filter/</div>
+                <div class="filters">
+                    <button data-filter="all">all/</button>
+                    <button data-filter="poetry">poetry/</button>
+                    <button data-filter="visual">visual art/</button>
+                    <button data-filter="pub">publications/</button>
+                    <button data-filter="websites">websites</button>
+                </div>
+            </div>
+
+            <!-- column1 :title, img filter-->
+
+        </div>
+        <div class="work-gallery-container-mobile">
+            <div id="nav-work-mobile">
+                <div id="info-link"><a href="info-mobile.html">
+                        info</a>
+                </div>
+                <div id="works-link"><a href="work.html">works</a></div>
+            </div>
+            <div id="gallery-work-mobile" class="gallery-items-mobile">
+
+            </div>
+
+            <!-- nav , scrolling gallery -->
+        </div>
+    </div>
+    <script>
+
+        fetch("gallery-items.html")
+            .then(res => res.text())
+            .then(html => {
+                document.querySelector(".gallery-items").innerHTML = html;
+            });
+        fetch("gallery-items.html")
+            .then(res => res.text())
+            .then(html => {
+                document.querySelector(".gallery-items-mobile").innerHTML = html;
+            });
+///
+
+        const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+        if (isDesktop) {
+            document.write('<script src="desktop.js"><\/script>');
+        } else {
+            document.write('<script src="mobile.js"><\/script>');
+        }
+//
+        const items = document.querySelectorAll('.work-gallery .item');
+ // filter buttons
+  const buttons = document.querySelectorAll(".filters button");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      // toggle active state per group
+      const group = button.closest(".filters");
+      group.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // re-select items every time (so they exist after fetch)
+      document.querySelectorAll(".gallery-items .item, .gallery-items-mobile .item")
+        .forEach(item => {
+          const tags = (item.getAttribute("data-tags") || "").split(" ");
+          if (filter === "all" || tags.includes(filter)) {
+            item.classList.remove("hidden");
+          } else {
+            item.classList.add("hidden");
+          }
+        });
+    });
+  });
+
+
+    </script>
+
+</body>
+
+</html>

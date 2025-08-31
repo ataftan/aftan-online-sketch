@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>aftan</title>
+    <link rel="icon" type="image/x-icon" href="assets/main-blue.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+</head>
+
+<body>
+
+    <div class="work-main">
+        <div class="container-work">
+            <div id="navbar-work"></div>
+            <div id="portrait-work"></div>
+        </div>
+        <div class="work-gallery-container">
+            <div class="work-gallery">
+
+                <div class="item" data-tags="visual websites">
+                    <div><img src="assets/womb temples.png"></div>
+                    <div class="item-title">womb temples</div>
+                </div>
+                <div class="item" data-tags="poetry websites">
+                    <div><img src="assets/sculpture-incubator.png"></div>
+                    <div class="item-title">sculpture incubator</div>
+                </div>
+
+                <div class="item" data-tags="poetry pub">
+                    <div><img src="assets/desire field.png"></div>
+                    <div class="item-title">desire fields</div>
+                </div>
+                <div class="item" data-tags="visual">
+                    <div><img src="assets/IMG_1089.png"></div>
+                    <div class="item-title">practice of remembering</div>
+                </div>
+                <div class="item" data-tags="pub">
+                    <div><img src="assets/kitaab kollective manifesto.png"></div>
+                    <div class="item-title"> kitaab kollective</div>
+                </div>
+
+                <div class="item" data-tags="poetry websites">
+                    <div><img src="assets/godprovoking.png"></div>
+                    <div class="item-title">god provoking</div>
+                </div>
+
+
+                <div class="item" data-tags="poetry websites">
+                    <div><img src="assets/ghost prints website.png"></div>
+                    <div class="item-title">phosphene arrays</div>
+                </div>
+                <div class="item" data-tags="visual">
+                    <div><img src="assets/another.png"></div>
+                    <div class="item-title">misc. drawings</div>
+                </div>
+
+                <div class="item" data-tags="websites">
+                    <div><img src="assets/women as vessel website.png"></div>
+                    <div class="item-title">women as vessel</div>
+                </div>
+                <div class="item" data-tags="visual">
+                    <div><img src="assets/7761b0be-1d0f-4ce9-9cf5-f5b853f34584.jpeg"></div>
+                    <div class="item-title">gender cybernetics</div>
+                </div>
+                <div class="item" data-tags="pub">
+                    <div><img src="assets/ziddi zubaan open call.png"></div>
+                    <div class="item-title">ziddi zubaan</div>
+                </div>
+                
+                <div class="item" data-tags="visual">
+                    <div><img src="assets/landscape.png"></div>
+                    <div class="item-title">spectral hauntings</div>
+                </div>
+
+            </div>
+            <div class="gallery-filter">
+                <div id="filter-title">filter</div>
+                <div class="filters">
+                    <button data-filter="all">all</button>
+                    <button data-filter="poetry">poetry</button>
+                    <button data-filter="visual">visual art</button>
+                    <button data-filter="pub">publications</button>
+                    <button data-filter="websites">websites</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script>
+        const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+        if (isDesktop) {
+            document.write('<script src="desktop.js"><\/script>');
+        } else {
+            document.write('<script src="mobile.js"><\/script>');
+        }
+
+        const items = document.querySelectorAll('.work-gallery .item');
+
+        const buttons = document.querySelectorAll('.filters button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                buttons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                items.forEach(item => {
+                    const tags = item.getAttribute('data-tags').split(' ');
+
+                    if (filter === 'all' || tags.includes(filter)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
