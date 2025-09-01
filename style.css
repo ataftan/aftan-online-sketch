@@ -689,6 +689,9 @@ aside {
   text-align: left;
   justify-items: left;
 }
+.item:hover{
+  transform: rotate(2deg);
+}
 
 .item.hidden {
   display: none !important;
