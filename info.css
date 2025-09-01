@@ -63,10 +63,10 @@
   }
      #index-img-mobile{
     position: aboslute;
-    width: 150%;
+    width: 120%;
     position: absolute;
     top: 0%;
-    left:-45%;
+    left:-41%;
     transform: rotate(-1deg);
    }
    
