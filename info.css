@@ -1,4 +1,9 @@
-
+.index-main-mobile{
+    display: none;
+  }
+.index-nav-mobile{
+  display: none;
+}
 @media only screen and (max-width: 900px) {
 .index-main-mobile {
     width: 100%;

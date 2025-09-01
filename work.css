@@ -310,7 +310,7 @@ margin:1em;
     align-items: center;
 
   }
-  #filter-title {
+  .gallery-work-mobile #filter-title {
     font-family: "Director", monospace;
     font-size: 0.7em;
     letter-spacing: 5px;
@@ -318,7 +318,7 @@ padding-top: 6em;
     text-align: center;
   }
 
-  .filters {
+.gallery-work-mobile  .filters {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -327,7 +327,7 @@ padding-top: 6em;
     padding-top: 0em;
   }
 
-  .filters button {
+.gallery-work-mobile  .filters button {
     background-color: rgb(255, 255, 255);
     text-align: center;
     font-family: "Director", monospace;
