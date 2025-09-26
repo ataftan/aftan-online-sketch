@@ -1,0 +1,17 @@
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+        if (isDesktop) {
+            document.write('<script src="desktop.js"><\/script>');
+        } else {
+            document.write('<script src="mobile.js"><\/script>');
+        }
+        //
+       
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const desktopItem = document.querySelector(".item-container");
+    const mobileItem = document.querySelector(".item-container-mobile");
+
+    if (desktopItem && mobileItem) {
+      mobileItem.innerHTML = desktopItem.innerHTML;
+    }
+  });

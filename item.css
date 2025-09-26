@@ -1,0 +1,340 @@
+
+body,
+html {
+  
+  overflow-y: auto;
+ 
+}
+.work-main {
+  display: block;
+
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2.5fr 6fr;
+  gap: 0px;
+  overflow: hidden;
+
+}
+.work-main > div:nth-child(2).item-container {
+  overflow-y: auto !important;
+  min-height: 0;
+}
+.item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  min-height: 0;       /* allow shrink inside scrollable parent */
+}
+.item-container.no-gap {
+  gap: 0;  /* remove default gap */
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* for multi photo gallery */
+.img-gallery {
+  margin-top: 2em;
+    margin-bottom: 2em;  /* new: adds breathing space */
+min-height: 400px;
+  display: flex;
+  margin-left: auto;
+ margin-right: auto;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-items: center;
+  scroll-snap-type: x mandatory; 
+  /* <-- this centers the images vertically */
+}  
+
+#installation .img-gallery {
+  margin-top: 2em;
+    margin-bottom: 2em;  /* new: adds breathing space */
+min-height: 400px;
+  display: flex;
+  margin-left: auto;
+ margin-right: auto;
+gap:10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-items: center;
+  scroll-snap-type: x mandatory; 
+  /* <-- this centers the images vertically */
+}  
+
+#installation .img-gallery > div {
+   flex: 0 0 auto;
+   scroll-snap-align: center;
+    box-sizing: border-box;
+  padding: 10px; /* adjust as needed */
+}
+.img-gallery.sliding {
+    margin-left: 8em;
+
+}
+
+.img-gallery > div {
+ flex: 0 0 auto;
+   scroll-snap-align: center;
+   
+}
+
+/* images */
+
+.img-gallery img {
+  max-height: 400px;
+  display: block;
+  object-fit: contain;
+}
+
+/* .img-gallery img {
+ height: auto;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+} */
+
+/* for singular img use this instead of img gallery */
+
+#singular img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+#modal {
+  display:none; 
+  position:fixed; 
+  inset:0; 
+  background:rgba(255, 255, 255, 0.7); 
+  z-index:9999; 
+ 
+}
+
+#modal img {
+  max-width:80vw; 
+  max-height:80vh; 
+  /* box-shadow:0 4px 20px rgba(0,0,0,0.25); */
+  cursor:pointer;
+}
+.img-text {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Hoover", monospace;
+  line-height: 20px;
+
+  letter-spacing: 1px;
+  transform: scaleY(1.2);
+
+  font-size: 0.9em;
+margin-bottom: 2em;
+  max-width: 500px;
+  text-align: justify;
+  justify-content: center;
+  overflow: visible;
+  color: rgb(78, 74, 74);
+ 
+}
+
+#notes{
+  padding-bottom: 2em;
+
+  display:flex;
+  flex-direction: column;
+ 
+  text-align: justify;
+  justify-content: center;
+}
+
+#notes img{
+  margin-top:0.4em;
+}
+
+#notes .img-gallery {
+    margin-bottom: 2em;  /* new: adds breathing space */
+min-height: 300px;
+  display: flex;
+  margin-left: auto;
+ margin-right: auto;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-items: center;
+  scroll-snap-type: x mandatory; 
+  /* <-- this centers the images vertically */
+}  
+
+
+
+
+
+#notes .img-gallery img {
+  max-height: 300px;
+  display: block;
+  object-fit: contain;
+}
+
+
+.video-wrapper{
+  width: 400px;       /* set the "cropped" area */
+  height: 350px;      
+  overflow: hidden;
+   display: block;
+  margin: 0 auto;
+}
+video {
+  width: 400px; 
+overflow: hidden;  height: auto;   /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+.kitaab-notes .video-wrapper{
+  padding-top: 1em;
+  width: 300px;       /* set the "cropped" area */
+  height: 280px;      
+  overflow: hidden;
+   display: block;
+  margin: 0 auto;
+}
+.kitaab-notes .video-wrapper video {
+  width: 300px; 
+overflow: hidden;  height: auto;   /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
+.img-text .link{
+    font-size: 0.8em;
+  text-transform: uppercase;
+  font-family: "Velvelyne", monospace;
+    margin: 0 auto;      /* optional, ensures block centering */
+  display: block;       /* ensures block centering works */
+
+  color: rgb(136, 132, 132);
+}
+
+.link, .caption {
+    text-align: center;
+    display: block;
+
+}
+.caption{
+      font-size: 0.8em;
+
+}
+.heading{
+  /* font-style: italic; */
+        font-size: 1.3em;
+  font-family: "Hoover", monospace;
+    margin: 0 auto; 
+    padding-top: 1em;
+
+}
+.description{
+        font-size: 1em;
+          /* font-style: italic; */
+        color: rgb(0, 0, 0);
+  font-family: "Velvelyne", monospace;
+    margin: 0 auto; 
+    margin-bottom: -0.5em;
+
+}
+
+.link a, .caption a {
+    color: rgb(136, 132, 132); /* applies to <a> inside both classes */
+}
+
+.link a:hover, .caption a:hover {
+    color: rgb(21, 0, 255); /* applies on hover for <a> inside both classes */
+}
+.custom{
+font-style: italic;
+}
+::-webkit-scrollbar {
+  background: none;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+html, body {
+  padding: 0 0 2em 0;
+}
+
+.item-container-mobile {
+  display: grid;
+  grid-template-rows: auto 2fr auto;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  column-gap: 0em;
+  height: 100%;
+}
+::-webkit-scrollbar {
+  background: none;
+}
+.img-gallery {
+
+min-height: 300px;
+
+  margin: 0 auto;
+  padding:2em;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+   align-items: center;
+  scroll-snap-type: x mandatory; 
+  align-items: center;
+  /* <-- this centers the images vertically */
+}
+
+
+
+.img-gallery > div {
+ flex: 0 0 100%;
+   scroll-snap-align: center;
+   
+}
+.img-gallery.sliding {
+    margin-left: 0em;
+
+}
+/* images */
+.img-gallery img {
+  max-height: 400px;
+  display: block;
+  object-fit: contain;
+}
+
+.img-text {
+
+  line-height: 20px;
+  margin-top: 3em;
+overflow-y: auto;
+  letter-spacing: 1px;
+  transform: scaleY(1.2);
+
+  font-size: 0.7em;
+  max-width: 80%;
+text-align: justify;
+  justify-content: justify;
+  
+}
+.img-text p{
+  padding-bottom: 2em;
+}
+.singular-gallery img {
+
+  width: 80%;
+  height: auto;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.4em 0 4em 0;
+}
+}

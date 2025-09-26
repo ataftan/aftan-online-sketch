@@ -23,6 +23,11 @@
   src: url("assets/Velvelyne-Light.otf");
 }
 
+@font-face {
+  font-family: Hoover;
+  src: url("assets/Hoover-Light.otf");
+}
+
 body,
 html {
   padding: 0px;
@@ -519,6 +524,9 @@ aside {
 /* WORK GALLERY */
 .work-main-mobile {
   display: none;
+}
+.pages-main-mobile{
+  display:none;
 }
 
 .work-main {
