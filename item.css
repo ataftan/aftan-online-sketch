@@ -1,10 +1,10 @@
-
 body,
 html {
-  
+
   overflow-y: auto;
- 
+
 }
+
 .work-main {
   display: block;
 
@@ -16,19 +16,25 @@ html {
   overflow: hidden;
 
 }
-.work-main > div:nth-child(2).item-container {
+
+.work-main>div:nth-child(2).item-container {
   overflow-y: auto !important;
   min-height: 0;
 }
+
 .item-container {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  min-height: 0;       /* allow shrink inside scrollable parent */
+  min-height: 0;
+  /* allow shrink inside scrollable parent */
 }
+
 .item-container.no-gap {
-  gap: 0;  /* remove default gap */
+  gap: 0;
+  /* remove default gap */
 }
+
 img {
   width: 100%;
   height: auto;
@@ -39,49 +45,52 @@ img {
 /* for multi photo gallery */
 .img-gallery {
   margin-top: 2em;
-    margin-bottom: 2em;  /* new: adds breathing space */
-min-height: 400px;
+  margin-bottom: 2em;
+  /* new: adds breathing space */
+  min-height: 400px;
   display: flex;
   margin-left: auto;
- margin-right: auto;
+  margin-right: auto;
 
   overflow-x: auto;
   overflow-y: hidden;
   align-items: center;
-  scroll-snap-type: x mandatory; 
+  scroll-snap-type: x mandatory;
   /* <-- this centers the images vertically */
-}  
+}
 
-#installation .img-gallery {
+.img-gallery#installation {
   margin-top: 2em;
-    margin-bottom: 2em;  /* new: adds breathing space */
-min-height: 400px;
+  margin-bottom: 2em;
+  min-height: 400px;
   display: flex;
   margin-left: auto;
- margin-right: auto;
-gap:10px;
+  margin-right: auto;
+  gap: 5px;
   overflow-x: auto;
+  margin-left: 10em;
   overflow-y: hidden;
   align-items: center;
-  scroll-snap-type: x mandatory; 
+  scroll-snap-type: x mandatory;
   /* <-- this centers the images vertically */
-}  
-
-#installation .img-gallery > div {
-   flex: 0 0 auto;
-   scroll-snap-align: center;
-    box-sizing: border-box;
-  padding: 10px; /* adjust as needed */
 }
+
+.img-gallery#installation>div {
+
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  box-sizing: border-box;
+}
+
 .img-gallery.sliding {
-    margin-left: 8em;
+  margin-left: 8em;
 
 }
 
-.img-gallery > div {
- flex: 0 0 auto;
-   scroll-snap-align: center;
-   
+.img-gallery>div {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+
 }
 
 /* images */
@@ -109,20 +118,21 @@ gap:10px;
 
 
 #modal {
-  display:none; 
-  position:fixed; 
-  inset:0; 
-  background:rgba(255, 255, 255, 0.7); 
-  z-index:9999; 
- 
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+
 }
 
 #modal img {
-  max-width:80vw; 
-  max-height:80vh; 
+  max-width: 80vw;
+  max-height: 80vh;
   /* box-shadow:0 4px 20px rgba(0,0,0,0.25); */
-  cursor:pointer;
+  cursor: pointer;
 }
+
 .img-text {
   margin-left: auto;
   margin-right: auto;
@@ -133,42 +143,49 @@ gap:10px;
   transform: scaleY(1.2);
 
   font-size: 0.9em;
-margin-bottom: 2em;
+  margin-bottom: 2em;
   max-width: 500px;
   text-align: justify;
   justify-content: center;
   overflow: visible;
   color: rgb(78, 74, 74);
- 
+
 }
 
-#notes{
+#notes {
   padding-bottom: 2em;
 
-  display:flex;
+  display: flex;
   flex-direction: column;
- 
+
   text-align: justify;
   justify-content: center;
 }
 
-#notes img{
-  margin-top:0.4em;
+#notes img {
+  margin-top: 0.4em;
+  margin: 0 auto;
+}
+
+#notes img#smallerimage {
+  width: 80%;
+
 }
 
 #notes .img-gallery {
-    margin-bottom: 2em;  /* new: adds breathing space */
-min-height: 300px;
+  margin-bottom: 2em;
+  /* new: adds breathing space */
+  min-height: 300px;
   display: flex;
   margin-left: auto;
- margin-right: auto;
+  margin-right: auto;
 
   overflow-x: auto;
   overflow-y: hidden;
   align-items: center;
-  scroll-snap-type: x mandatory; 
+  scroll-snap-type: x mandatory;
   /* <-- this centers the images vertically */
-}  
+}
 
 
 
@@ -181,81 +198,104 @@ min-height: 300px;
 }
 
 
-.video-wrapper{
-  width: 400px;       /* set the "cropped" area */
-  height: 350px;      
+.video-wrapper {
+  width: 400px;
+  /* set the "cropped" area */
+  height: 350px;
   overflow: hidden;
-   display: block;
-  margin: 0 auto;
-}
-video {
-  width: 400px; 
-overflow: hidden;  height: auto;   /* keeps aspect ratio */
   display: block;
-  margin: 0 auto; /* center horizontally */
-}
-.kitaab-notes .video-wrapper{
-  padding-top: 1em;
-  width: 300px;       /* set the "cropped" area */
-  height: 280px;      
-  overflow: hidden;
-   display: block;
   margin: 0 auto;
-}
-.kitaab-notes .video-wrapper video {
-  width: 300px; 
-overflow: hidden;  height: auto;   /* keeps aspect ratio */
-  display: block;
-  margin: 0 auto; /* center horizontally */
 }
 
-.img-text .link{
-    font-size: 0.8em;
+video {
+  width: 400px;
+  overflow: hidden;
+  height: auto;
+  /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto;
+  /* center horizontally */
+}
+
+.kitaab-notes .video-wrapper {
+  padding-top: 1em;
+  width: 300px;
+  /* set the "cropped" area */
+  height: 280px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+}
+
+.kitaab-notes .video-wrapper video {
+  width: 300px;
+  overflow: hidden;
+  height: auto;
+  /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto;
+  /* center horizontally */
+}
+
+.img-text .link {
+  font-size: 0.8em;
   text-transform: uppercase;
   font-family: "Velvelyne", monospace;
-    margin: 0 auto;      /* optional, ensures block centering */
-  display: block;       /* ensures block centering works */
+  margin: 0 auto;
+  /* optional, ensures block centering */
+  display: block;
+  /* ensures block centering works */
 
   color: rgb(136, 132, 132);
 }
 
-.link, .caption {
-    text-align: center;
-    display: block;
+.link,
+.caption {
+  text-align: center;
+  display: block;
 
 }
-.caption{
-      font-size: 0.8em;
+
+.caption {
+  font-size: 0.8em;
 
 }
-.heading{
+
+.heading {
   /* font-style: italic; */
-        font-size: 1.3em;
+  font-size: 1.3em;
   font-family: "Hoover", monospace;
-    margin: 0 auto; 
-    padding-top: 1em;
+  margin: 0 auto;
+  padding-top: 1em;
 
 }
-.description{
-        font-size: 1em;
-          /* font-style: italic; */
-        color: rgb(0, 0, 0);
+
+.description {
+  font-size: 1em;
+  /* font-style: italic; */
+  color: rgb(0, 0, 0);
   font-family: "Velvelyne", monospace;
-    margin: 0 auto; 
-    margin-bottom: -0.5em;
+  margin: 0 auto;
+  margin-bottom: -0.5em;
 
 }
 
-.link a, .caption a {
-    color: rgb(136, 132, 132); /* applies to <a> inside both classes */
+.link a,
+.caption a {
+  color: rgb(136, 132, 132);
+  /* applies to <a> inside both classes */
 }
 
-.link a:hover, .caption a:hover {
-    color: rgb(21, 0, 255); /* applies on hover for <a> inside both classes */
+.link a:hover,
+.caption a:hover {
+  color: rgb(21, 0, 255);
+  /* applies on hover for <a> inside both classes */
 }
-.custom{
-font-style: italic;
+
+.custom {
+  font-style: italic;
 }
+
 ::-webkit-scrollbar {
   background: none;
 }
@@ -263,78 +303,150 @@ font-style: italic;
 
 
 @media only screen and (max-width: 900px) {
-html, body {
-  padding: 0 0 2em 0;
+
+  html,
+  body {
+    padding: 0 0 2em 0;
+    overflow-y: auto;
+  }
+  ::-webkit-scrollbar {
+  width: 0px;       /* remove scrollbar width */
+  height: 0px;      /* remove horizontal scrollbar */
+  background: transparent; /* transparent background */
+}
+* {
+  scrollbar-width: none;   /* hides scrollbar */
+  scrollbar-color: transparent transparent;
 }
 
-.item-container-mobile {
-  display: grid;
-  grid-template-rows: auto 2fr auto;
-  grid-template-columns: 1fr;
-  overflow: hidden;
-  column-gap: 0em;
-  height: 100%;
-}
-::-webkit-scrollbar {
-  background: none;
-}
-.img-gallery {
-
-min-height: 300px;
-
-  margin: 0 auto;
-  padding:2em;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-   align-items: center;
-  scroll-snap-type: x mandatory; 
-  align-items: center;
-  /* <-- this centers the images vertically */
+/* IE/Edge (legacy) */
+* {
+  -ms-overflow-style: none; /* hides scrollbar */
 }
 
+  .item-container-mobile {
+    display: grid;
+    grid-template-rows: auto 2fr auto;
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+    column-gap: 0em;
+    height: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    background: none;
+  }
+
+  .img-gallery#installation,
+  .img-gallery {
+
+    min-height: 300px;
+
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+    /* <-- this centers the images vertically */
+  }
 
 
-.img-gallery > div {
- flex: 0 0 100%;
-   scroll-snap-align: center;
-   
-}
-.img-gallery.sliding {
+
+  .img-gallery#installation>div,
+  .img-gallery>div {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+
+  }
+
+  .img-gallery.sliding,
+  .img-gallery#installation {
     margin-left: 0em;
+  }
 
-}
-/* images */
-.img-gallery img {
-  max-height: 400px;
+  /* images */
+  .img-gallery#installation img,
+  .img-gallery img {
+    max-height: 400px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .img-text {
+
+    line-height: 20px;
+    margin-top: 1.2em;
+    letter-spacing: 1px;
+    transform: scaleY(1.2);
+    overflow-y: auto;
+    font-size: 0.7em;
+
+    max-width: 80%;
+    text-align: justify;
+    justify-content: justify;
+
+  }
+
+
+  .heading,
+  .description {
+    padding: 0;
+    margin: 0;
+  }
+
+  .img-text .link {
+    margin: 0 auto;
+    display: block;
+    padding-top: 1.5em;
+
+  }
+
+
+
+  .img-text p {
+    padding-bottom: 2em;
+  }
+
+  .img-text .link p {
+    padding: 0;
+    margin: 0;
+    display: inline;
+  }
+
+  .singular-gallery img {
+
+    width: 80%;
+    height: auto;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.4em 0 4em 0;
+  }
+
+  .img-text.mobile-margin {
+    margin-top: 4em;
+
+  }
+
+.video-wrapper {
+  width: 200px;
+  /* set the "cropped" area */
+  height: 200px;
+  overflow: hidden;
   display: block;
-  object-fit: contain;
+  margin: 0 auto;
 }
 
-.img-text {
-
-  line-height: 20px;
-  margin-top: 3em;
-overflow-y: auto;
-  letter-spacing: 1px;
-  transform: scaleY(1.2);
-
-  font-size: 0.7em;
-  max-width: 80%;
-text-align: justify;
-  justify-content: justify;
-  
-}
-.img-text p{
-  padding-bottom: 2em;
-}
-.singular-gallery img {
-
-  width: 80%;
+video {
+  width: 200px;
+  overflow: hidden;
   height: auto;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.4em 0 4em 0;
+  /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto;
+  /* center horizontally */
 }
 }
