@@ -712,7 +712,11 @@ aside {
   object-fit: cover;
   display: block;
 }
-
+.item video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .item-title {
   font-family: "Velvelyne";
   font-size: 0.74em;

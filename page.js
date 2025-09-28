@@ -18,7 +18,7 @@
 
   
 $(function(){
-  const $images = $(".img-gallery img"); // all gallery images
+  const $images = $("img"); // all gallery images
   let currentIndex = 0;
 
   // show modal on click

@@ -5,6 +5,22 @@ html {
 
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+/* IE/Edge (legacy) */
+* {
+  -ms-overflow-style: none;
+}
+
 .work-main {
   display: block;
 
@@ -46,7 +62,6 @@ img {
 .img-gallery {
   margin-top: 2em;
   margin-bottom: 2em;
-  /* new: adds breathing space */
   min-height: 400px;
   display: flex;
   margin-left: auto;
@@ -80,6 +95,8 @@ img {
   flex: 0 0 auto;
   scroll-snap-align: center;
   box-sizing: border-box;
+  margin: 0 1em;
+
 }
 
 .img-gallery.sliding {
@@ -90,6 +107,9 @@ img {
 .img-gallery>div {
   flex: 0 0 auto;
   scroll-snap-align: center;
+  text-align: center;
+  /* center text under image */
+  margin: 0 0em;
 
 }
 
@@ -103,12 +123,52 @@ img {
 
 
 
+.img-gallery#transfiguration {
+  margin-top: 2em;
+  margin-bottom: -4em;
+  display: flex;
+  margin-left: 8em;
+  margin-right: auto;
+  padding: 0;
+  min-height: 500px;
+
+  overflow-x: auto;
+  overflow-y: visible;
+  /* so captions are visible */
+  align-items: flex-start;
+  /* top-align images + captions */
+  scroll-snap-type: x mandatory;
+
+}
+
+.img-gallery#transfiguration>div {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
 #singular img {
   margin-left: auto;
   margin-right: auto;
 }
+  #singular video{
+ margin-left: auto;
+  margin-right: auto;
+   width: 80%;
+    height: auto;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.4em 0 4em 0;
+  }
 
+.gallery-caption {
+  font-size: 0.9em;
+  color: rgb(78, 74, 74);
+  font-family: "Hoover", monospace;
+  margin: 0 auto;
+  display: block;
 
+}
 
 #modal {
   display: none;
@@ -160,14 +220,42 @@ img {
   margin: 0 auto;
 }
 
-#notes img#smallerimage {
-  width: 80%;
 
+#reference-gallery {
+  min-height: 250px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  gap: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+}
+
+#reference-gallery.reference-gallery-wombtemples img {
+  max-height: 300px;
+
+}
+
+#reference-gallery>div {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+  /* center text under image */
+  margin: 0 0em;
+
+}
+
+#reference-gallery img {
+  max-height: 250px;
+  display: block;
+  object-fit: contain;
 }
 
 #notes .img-gallery {
   margin-bottom: 2em;
-  /* new: adds breathing space */
   min-height: 300px;
   display: flex;
   margin-left: auto;
@@ -180,7 +268,14 @@ img {
   /* <-- this centers the images vertically */
 }
 
+#notes.img-gallery>div {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+  /* center text under image */
+  margin: 0 0em;
 
+}
 
 
 
@@ -190,18 +285,25 @@ img {
   object-fit: contain;
 }
 
+#notes .img-gallery #smallerimage img {
+  width: 40%;
+  display: block;
+  object-fit: contain;
+}
+
 
 .video-wrapper {
-  width: 400px;
+  width: 300px;
   /* set the "cropped" area */
-  height: 350px;
+  height: 300px;
   overflow: hidden;
   display: block;
+  padding-left: 1em;
   margin: 0 auto;
 }
 
 video {
-  width: 400px;
+  width: 300px;
   overflow: hidden;
   height: auto;
   /* keeps aspect ratio */
@@ -302,33 +404,33 @@ video {
     padding: 0 0 2em 0;
     overflow-y: auto;
   }
-  ::-webkit-scrollbar {
-  width: 0px;       /* remove scrollbar width */
-  height: 0px;      /* remove horizontal scrollbar */
-  background: transparent; /* transparent background */
-}
-* {
-  scrollbar-width: none;   /* hides scrollbar */
-  scrollbar-color: transparent transparent;
-}
 
-/* IE/Edge (legacy) */
-* {
-  -ms-overflow-style: none; /* hides scrollbar */
-}
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+  }
+
+  * {
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+  }
+
+  /* IE/Edge (legacy) */
+  * {
+    -ms-overflow-style: none;
+  }
 
   .item-container-mobile {
     display: grid;
-    grid-template-rows: auto 2fr auto;
+    grid-template-rows: 2fr auto;
     grid-template-columns: 1fr;
-    overflow-y: auto;
-    column-gap: 0em;
+    overflow-y: visible;
+    column-gap: 4em;
     height: 100%;
   }
 
-  ::-webkit-scrollbar {
-    background: none;
-  }
+
 
   .img-gallery#installation,
   .img-gallery {
@@ -346,7 +448,10 @@ video {
     /* <-- this centers the images vertically */
   }
 
-
+  .img-gallery.sliding {
+    margin-left: 0em;
+    margin-bottom: 1em;
+  }
 
   .img-gallery#installation>div,
   .img-gallery>div {
@@ -355,7 +460,7 @@ video {
 
   }
 
-  .img-gallery.sliding,
+
   .img-gallery#installation {
     margin-left: 0em;
   }
@@ -368,15 +473,37 @@ video {
     object-fit: contain;
   }
 
+  .img-gallery#transfiguration {
+    margin-bottom: 3em;
+    margin-left: 0;
+  }
+
+
+  .singular-gallery img {
+
+    width: 80%;
+    height: auto;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.4em 0 4em 0;
+  }
+
+
+
+  /* img text */
   .img-text {
 
     line-height: 20px;
     margin-top: 1.2em;
     letter-spacing: 1px;
     transform: scaleY(1.2);
-    overflow-y: auto;
     font-size: 0.7em;
 
+    height: auto;
+
+    /* make sure it doesn't scroll inside itself */
+    overflow: visible;
     max-width: 80%;
     text-align: justify;
     justify-content: justify;
@@ -409,48 +536,59 @@ video {
     display: inline;
   }
 
-  .singular-gallery img {
-
-    width: 80%;
-    height: auto;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.4em 0 4em 0;
-  }
 
   .img-text.mobile-margin {
-    margin-top: 4em;
+    margin-top: 5em;
 
   }
+
   #ziddi img {
-  max-height: 250px;   /* or whatever looks good */
-  max-width: 85vw;     /* keeps it responsive */
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
-}
-#notes {
-  padding-bottom: 4em;
+    max-height: 250px;
+    /* or whatever looks good */
+    max-width: 85vw;
+    /* keeps it responsive */
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
 
-}
-.video-wrapper {
-  width: 200px;
-  /* set the "cropped" area */
-  height: 200px;
-  overflow: hidden;
-  display: block;
-  margin: 0 auto;
-}
+  #transfiguration img {
+    max-height: 250px;
+    /* or whatever looks good */
+    max-width: 50vw;
+    /* keeps it responsive */
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
 
-video {
-  width: 200px;
-  overflow: hidden;
-  height: auto;
-  /* keeps aspect ratio */
-  display: block;
-  margin: 0 auto;
-  /* center horizontally */
-}
+  #notes {
+    padding-bottom: 4em;
+
+
+  }
+
+  .video-wrapper {
+    width: 200px;
+    /* set the "cropped" area */
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+  }
+
+  video {
+    width: 200px;
+    overflow: hidden;
+    height: auto;
+    /* keeps aspect ratio */
+    display: block;
+    margin: 0 auto;
+  }
+
+  #reference-gallery.reference-gallery-wombtemples img {
+    max-height: 200px;
+
+  }
 
 }
