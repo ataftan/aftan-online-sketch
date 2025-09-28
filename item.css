@@ -101,14 +101,7 @@ img {
   object-fit: contain;
 }
 
-/* .img-gallery img {
- height: auto;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-} */
 
-/* for singular img use this instead of img gallery */
 
 #singular img {
   margin-left: auto;
@@ -430,6 +423,13 @@ video {
     margin-top: 4em;
 
   }
+  #ziddi img {
+  max-height: 250px;   /* or whatever looks good */
+  max-width: 85vw;     /* keeps it responsive */
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
 #notes {
   padding-bottom: 4em;
 
@@ -452,4 +452,5 @@ video {
   margin: 0 auto;
   /* center horizontally */
 }
+
 }
