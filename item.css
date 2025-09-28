@@ -430,7 +430,10 @@ video {
     margin-top: 4em;
 
   }
+#notes {
+  padding-bottom: 4em;
 
+}
 .video-wrapper {
   width: 200px;
   /* set the "cropped" area */
