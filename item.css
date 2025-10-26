@@ -189,6 +189,26 @@ gap:10px;
   cursor: pointer;
 }
 
+.img-text-center {
+ width: 100%; /* take full width of the image container */
+    max-width: 500px; /* same as image width */
+    margin: 0 auto; /* centers horizontally */
+  font-family: "Hoover", monospace;
+  line-height: 20px;
+
+  letter-spacing: 1px;
+  transform: scaleY(1.2);
+
+  font-size: 0.9em;
+  margin-bottom: 2em;
+  max-width: 500px;
+  text-align: justify;
+  justify-content: center;
+  overflow: visible;
+  color: rgb(78, 74, 74);
+  }
+
+
 .img-text {
   margin-left: auto;
   margin-right: auto;
