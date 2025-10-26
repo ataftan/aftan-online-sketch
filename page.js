@@ -1,3 +1,10 @@
+window.addEventListener('DOMContentLoaded', () => {
+  const galleries = document.getElementsByClassName('img-gallery');
+  Array.from(galleries).forEach(gallery => {
+    gallery.scrollLeft = 0;
+  });
+});
+  
   const isDesktop = window.matchMedia("(min-width: 768px)").matches;
         if (isDesktop) {
             document.write('<script src="desktop.js"><\/script>');

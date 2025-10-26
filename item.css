@@ -62,31 +62,34 @@ img {
 .img-gallery {
   margin-top: 2em;
   margin-bottom: 2em;
+  
   min-height: 400px;
+   justify-content: flex-start;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-
   overflow-x: auto;
   overflow-y: hidden;
+  box-sizing: border-box;
   align-items: center;
   scroll-snap-type: x mandatory;
+  /* justify-content: center;   */
+  /* this is not working */
   /* <-- this centers the images vertically */
 }
 
 .img-gallery#installation {
   margin-top: 2em;
   margin-bottom: 2em;
-  min-height: 400px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   gap: 5px;
   overflow-x: auto;
-  margin-left: 10em;
   overflow-y: hidden;
   align-items: center;
   scroll-snap-type: x mandatory;
+  padding: 0 1em;
   /* <-- this centers the images vertically */
 }
 
@@ -127,11 +130,11 @@ img {
   margin-top: 2em;
   margin-bottom: -4em;
   display: flex;
-  margin-left: 8em;
+  /* margin-left: 8em; */
   margin-right: auto;
   padding: 0;
   min-height: 500px;
-
+gap:10px;
   overflow-x: auto;
   overflow-y: visible;
   /* so captions are visible */
@@ -289,6 +292,30 @@ img {
   width: 40%;
   display: block;
   object-fit: contain;
+}
+
+
+.wider-video-wrapper{
+width: 100%;            /* full width of container */
+  max-width: 600px;
+  height: auto;       /* adjusts automatically */
+  margin: 0 auto;
+  text-align: center;
+  flex: 0 0 auto;
+display: flex;
+  justify-content: center;   
+
+
+    
+  /* overflow: hidden; */
+}
+
+.wider-video-video{
+width: 100%;        /* fills container width */
+  height: auto;       /* keeps aspect ratio */
+  display: block;     /* removes extra spacing */
+  object-fit: contain; /* ensures full video is visible */
+  max-height: 600px;  
 }
 
 
@@ -472,11 +499,11 @@ video {
     display: block;
     object-fit: contain;
   }
-
+/* 
   .img-gallery#transfiguration {
     margin-bottom: 3em;
     margin-left: 0;
-  }
+  } */
 
 
   .singular-gallery img {
@@ -552,15 +579,12 @@ video {
     display: block;
   }
 
-  #transfiguration img {
+  /* #transfiguration img {
     max-height: 250px;
-    /* or whatever looks good */
     max-width: 50vw;
-    /* keeps it responsive */
     object-fit: contain;
-    margin: 0 auto;
     display: block;
-  }
+  } */
 
   #notes {
     padding-bottom: 4em;
@@ -585,6 +609,23 @@ video {
     display: block;
     margin: 0 auto;
   }
+
+  .wider-video-wrapper{
+     
+  width: 100%;            /* full width of container */
+  max-width: 600px;
+
+
+    
+}
+
+.wider-video-video{
+width: 100%;        /* fills container width */
+  height: auto;       /* keeps aspect ratio */
+  display: block;     /* removes extra spacing */
+  object-fit: contain; /* ensures full video is visible */
+  max-height: 600px;  
+}
 
   #reference-gallery.reference-gallery-wombtemples img {
     max-height: 200px;
