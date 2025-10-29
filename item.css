@@ -62,9 +62,9 @@ img {
 .img-gallery {
   margin-top: 2em;
   margin-bottom: 2em;
-  
+
   min-height: 400px;
-   justify-content: flex-start;
+  justify-content: flex-start;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -134,7 +134,7 @@ img {
   margin-right: auto;
   padding: 0;
   min-height: 500px;
-gap:10px;
+  gap: 10px;
   overflow-x: auto;
   overflow-y: visible;
   /* so captions are visible */
@@ -153,16 +153,17 @@ gap:10px;
   margin-left: auto;
   margin-right: auto;
 }
-  #singular video{
- margin-left: auto;
+
+#singular video {
+  margin-left: auto;
   margin-right: auto;
-   width: 80%;
-    height: auto;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.4em 0 4em 0;
-  }
+  width: 80%;
+  height: auto;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.4em 0 4em 0;
+}
 
 .gallery-caption {
   font-size: 0.9em;
@@ -190,9 +191,12 @@ gap:10px;
 }
 
 .img-text-center {
- width: 100%; /* take full width of the image container */
-    max-width: 500px; /* same as image width */
-    margin: 0 auto; /* centers horizontally */
+  width: 100%;
+  /* take full width of the image container */
+  max-width: 500px;
+  /* same as image width */
+  margin: 0 auto;
+  /* centers horizontally */
   font-family: "Hoover", monospace;
   line-height: 20px;
 
@@ -206,7 +210,7 @@ gap:10px;
   justify-content: center;
   overflow: visible;
   color: rgb(78, 74, 74);
-  }
+}
 
 
 .img-text {
@@ -315,27 +319,33 @@ gap:10px;
 }
 
 
-.wider-video-wrapper{
-width: 100%;            /* full width of container */
+.wider-video-wrapper {
+  width: 100%;
+  /* full width of container */
   max-width: 600px;
-  height: auto;       /* adjusts automatically */
+  height: auto;
+  /* adjusts automatically */
   margin: 0 auto;
   text-align: center;
   flex: 0 0 auto;
-display: flex;
-  justify-content: center;   
+  display: flex;
+  justify-content: center;
 
 
-    
+
   /* overflow: hidden; */
 }
 
-.wider-video-video{
-width: 100%;        /* fills container width */
-  height: auto;       /* keeps aspect ratio */
-  display: block;     /* removes extra spacing */
-  object-fit: contain; /* ensures full video is visible */
-  max-height: 600px;  
+.wider-video-video {
+  width: 100%;
+  /* fills container width */
+  height: auto;
+  /* keeps aspect ratio */
+  display: block;
+  /* removes extra spacing */
+  object-fit: contain;
+  /* ensures full video is visible */
+  max-height: 600px;
 }
 
 
@@ -450,6 +460,7 @@ video {
   body {
     padding: 0 0 2em 0;
     overflow-y: auto;
+     height: auto;
   }
 
   ::-webkit-scrollbar {
@@ -472,11 +483,12 @@ video {
     display: grid;
     grid-template-rows: 2fr auto;
     grid-template-columns: 1fr;
-    overflow-y: visible;
     column-gap: 4em;
-    height: 100%;
+    /* overflow-y: visible;
+    height: 100%; */
+    overflow: visible !important;
+    height: auto !important;
   }
-
 
 
   .img-gallery#installation,
@@ -519,7 +531,12 @@ video {
     display: block;
     object-fit: contain;
   }
-/* 
+  .margin-bottom-text{
+  margin-bottom: 3em;
+}
+
+
+  /* 
   .img-gallery#transfiguration {
     margin-bottom: 3em;
     margin-left: 0;
@@ -549,7 +566,6 @@ video {
 
     height: auto;
 
-    /* make sure it doesn't scroll inside itself */
     overflow: visible;
     max-width: 80%;
     text-align: justify;
@@ -630,22 +646,27 @@ video {
     margin: 0 auto;
   }
 
-  .wider-video-wrapper{
-     
-  width: 100%;            /* full width of container */
-  max-width: 600px;
+  .wider-video-wrapper {
+
+    width: 100%;
+    /* full width of container */
+    max-width: 600px;
 
 
-    
-}
 
-.wider-video-video{
-width: 100%;        /* fills container width */
-  height: auto;       /* keeps aspect ratio */
-  display: block;     /* removes extra spacing */
-  object-fit: contain; /* ensures full video is visible */
-  max-height: 600px;  
-}
+  }
+
+  .wider-video-video {
+    width: 100%;
+    /* fills container width */
+    height: auto;
+    /* keeps aspect ratio */
+    display: block;
+    /* removes extra spacing */
+    object-fit: contain;
+    /* ensures full video is visible */
+    max-height: 600px;
+  }
 
   #reference-gallery.reference-gallery-wombtemples img {
     max-height: 200px;
