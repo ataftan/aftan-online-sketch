@@ -671,27 +671,14 @@ video {
   }
 
   #reference-gallery{
+      scroll-snap-type: x proximity;
+
 -webkit-overflow-scrolling: touch;
   touch-action: pan-x pan-y;
+    overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
   }
 
-
-  #reference-gallery {
-  min-height: 250px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  gap: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  align-items: center;
-  scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-  touch-action: pan-x pan-y;
-  overscroll-behavior-x: contain;
-  overscroll-behavior-y: auto;
-}
 
 #reference-gallery.reference-gallery-wombtemples img {
   max-height: 300px;
