@@ -33,7 +33,7 @@ html {
 }
 
 .work-main>div:nth-child(2).item-container {
-  /* overflow-y: auto !important; */ 
+  /* overflow-y: auto !important; */
   /* removed the above to only have vertical overflow in body tag 14/12 */
   min-height: 0;
 }
@@ -460,7 +460,7 @@ video {
   body {
     padding: 0 0 2em 0;
     overflow-y: auto;
-     height: auto;
+    height: auto;
   }
 
   ::-webkit-scrollbar {
@@ -504,9 +504,9 @@ video {
     align-items: center;
     scroll-snap-type: x mandatory;
     align-items: center;
-      -webkit-overflow-scrolling: touch;
-  touch-action: pan-x pan-y;
-  
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+
   }
 
   .img-gallery.sliding {
@@ -533,9 +533,10 @@ video {
     display: block;
     object-fit: contain;
   }
-  .margin-bottom-text{
-  margin-bottom: 3em;
-}
+
+  .margin-bottom-text {
+    margin-bottom: 3em;
+  }
 
 
   /* 
@@ -654,7 +655,7 @@ video {
     /* full width of container */
     max-width: 600px;
 
-  
+
 
   }
 
@@ -670,41 +671,42 @@ video {
     max-height: 600px;
   }
 
-  #reference-gallery{
-      scroll-snap-type: x proximity;
+  #reference-gallery {
+    scroll-snap-type: x proximity;
 
--webkit-overflow-scrolling: touch;
-  touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
     overscroll-behavior-x: contain;
-  overscroll-behavior-y: auto;
+    overscroll-behavior-y: auto;
   }
 
 
-#reference-gallery.reference-gallery-wombtemples img {
-  max-height: 300px;
+  #reference-gallery.reference-gallery-wombtemples img {
+    max-height: 300px;
 
-}
+  }
 
-#reference-gallery>div {
-  flex: 0 0 auto;
-  /* scroll-snap-align: center; */
+  #reference-gallery>div {
+    flex: 0 0 auto;
+    /* scroll-snap-align: center; */
     scroll-snap-align: start;
 
-  text-align: center;
-  /* center text under image */
-  margin: 0 0em;
+    text-align: center;
+    /* center text under image */
+    margin: 0 0em;
 
-}
+  }
 
-#reference-gallery img {
-  max-height: 200px;
-  /* width: auto; */
-  max-width: 80vw;
-  display: block;
-}
+  #reference-gallery img {
+    max-height: 200px;
+    /* width: auto; */
+    max-width: 80vw;
+    display: block;
+  }
+
   #reference-gallery.reference-gallery-wombtemples img {
     max-height: 200px;
-  
+
   }
 
 }
