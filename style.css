@@ -376,7 +376,7 @@ position: fixed;
   margin: 0.2em
 }
 
-#my-paragraph span hover {
+#my-paragraph span:hover {
   background-color: black;
   color: white;
 
