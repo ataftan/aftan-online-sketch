@@ -573,6 +573,9 @@ video {
     max-width: 80%;
     text-align: justify;
     justify-content: justify;
+     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+    /* scroll-snap-type: x mandatory; */
 
   }
 
